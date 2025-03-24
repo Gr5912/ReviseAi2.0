@@ -1,0 +1,176 @@
+body {
+    background-color: #301934; /* Dark purple background */
+    color: #E6E6FA; /* Lavender text */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #483D8B; /* Dark slate blue sidebar */
+    color: #E6E6FA; /* Lavender text */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+    color: #D8BFD8; /* Thistle heading */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #7B68EE; /* Medium slate blue border */
+}
+
+.sidebar li:hover {
+    background-color: #6A5ACD; /* Slate blue hover */
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #D8BFD8; /* Thistle heading */
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.output-area {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.output-area h2 {
+    color: #D8BFD8; /* Thistle heading */
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+#response-output {
+    background-color: #483D8B; /* Dark slate blue output */
+    color: #E6E6FA; /* Lavender text */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#response-output p {
+    margin-top: 0;
+}
+
+.bottom-input-area {
+    background-color: #483D8B; /* Dark slate blue input area */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-input-area .input-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 10px;
+}
+
+.bottom-input-area #prompt {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    background-color: #6A5ACD; /* Slate blue input */
+    color: #E6E6FA; /* Lavender text */
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.bottom-input-area #prompt::placeholder {
+    color: #D8BFD8; /* Thistle placeholder */
+}
+
+.bottom-input-area #submit-prompt {
+    background-color: #7B68EE; /* Medium slate blue submit button */
+    color: #301934; /* Dark purple text */
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 15px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-input-area #submit-prompt:hover {
+    background-color: #6A5ACD; /* Slate blue hover */
+}
+
+.bottom-input-area .actions {
+    display: flex;
+    gap: 10px;
+    max-width: 900px;
+    width: 100%;
+    justify-content: start;
+}
+
+.bottom-input-area .actions button {
+    background-color: transparent;
+    color: #D8BFD8; /* Thistle text */
+    border: 1px solid #7B68EE; /* Medium slate blue border */
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.bottom-input-area .actions button:hover {
+    border-color: #E6E6FA; /* Lavender border */
+    color: #E6E6FA; /* Lavender text */
+}
+
+/* Style the send icon */
+.bottom-input-area #submit-prompt svg {
+    width: 20px;
+    height: 20px;
+}
